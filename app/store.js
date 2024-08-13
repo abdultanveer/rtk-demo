@@ -1,9 +1,11 @@
 const configureStore = require('@reduxjs/toolkit').configureStore
+const { coreModule } = require('@reduxjs/toolkit/query')
 const cakeReducer = require('./features/cake/cakeSlice')
 
-const store = configureStore({
+  store = configureStore({
     reducer: {
         cake:cakeReducer
     }
 })
-//export default store
+
+module.exports = store
